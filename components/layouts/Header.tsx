@@ -1,9 +1,6 @@
-import Link from "next/link";
-
 export default function Header() {
     return (
-        <nav className="sticky top-0 bg-[#0C0C0C]">
-            {/* <Link href="/">Home</Link> */}
+        <nav className="sticky top-0 bg-[#0C0C0C] opacity-90 z-10">
             <div className="flex justify-between py-6 px-10 items-center">
                 {/* Header left side */}
                 <div>

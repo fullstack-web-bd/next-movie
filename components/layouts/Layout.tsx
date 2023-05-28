@@ -16,7 +16,7 @@ export default function Layout({ children }) {
                 src="https://code.jquery.com/jquery-3.6.4.min.js"
             /> */}
 
-            <div className="flex bg-[#0C0C0C] text-primary">
+            <div className="flex bg-[#0C0C0C] text-primary font-sans">
                 {/* Sidebar */}
                 <Sidebar />
 
