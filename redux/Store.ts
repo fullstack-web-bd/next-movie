@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import MovieReducer from './reducers/MovieReducer';
+import { configureStore } from "@reduxjs/toolkit";
+import WatchlistReducer from "./reducers/watchlist-reducer";
 
 const store = configureStore({
   reducer: {
-    movie: MovieReducer
-  }
+    watchlist: WatchlistReducer,
+  },
 });
 
 export default store;
