@@ -6,29 +6,38 @@ import { generateResponse } from "@/utils/response-generator";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // GET /api/movies
   if (req.method === "GET") {
-    const movies = Object.values(moviesJson);
+    const movies = moviesJson.default;
     let filteredMovies = movies;
+    const sorting = req.query.sort || "sort_rating_desc";
 
     // Sorting
-    if (req.query.sort_year_asc) {
+    if (sorting === "sort_year_asc") {
       filteredMovies.sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    } else if (req.query.sort_year_desc) {
+    } else if (sorting === "sort_year_desc") {
       filteredMovies.sort((a, b) => parseInt(b.year) - parseInt(a.year));
-    } else if (req.query.sort_rating_asc) {
+    } else if (sorting === "sort_rating_asc") {
       filteredMovies.sort(
         (a, b) => parseFloat(a.imdb_rating) - parseFloat(b.imdb_rating)
       );
-    } else if (req.query.sort_rating_desc) {
-      filteredMovies.sort(
-        (a, b) => parseFloat(b.imdb_rating) - parseFloat(a.imdb_rating)
-      );
-    } else if (req.query.coming_soon) {
-      filteredMovies = filteredMovies.filter((m) => m.coming_soon === true);
     } else {
       // Default is sort by rating descending.
       filteredMovies.sort(
         (a, b) => parseFloat(b.imdb_rating) - parseFloat(a.imdb_rating)
       );
+    }
+
+    // Filter by coming soon
+    if (req.query.coming_soon) {
+      filteredMovies = filteredMovies.filter((m) => m.coming_soon === true);
+    }
+
+    // Filter by genre
+    if (req.query.genre) {
+      const genre = req.query.genre.toString().toLowerCase();
+
+      filteredMovies = filteredMovies.filter((m) => {
+        return m.genre.toLowerCase().includes(genre);
+      });
     }
 
     // Search Filter
