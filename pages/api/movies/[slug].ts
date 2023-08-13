@@ -11,6 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Find the movie by that slug.
     const movie = movies.find((m) => m.slug === req.query.slug);
 
+    // If movie not found, return 404.
     if (!movie)
       res
         .status(404)
@@ -23,6 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           )
         );
 
+    // If movie found, return it.
     res.status(200).json(generateResponse(res, movie, 200, `Movie found.`));
   }
 }
