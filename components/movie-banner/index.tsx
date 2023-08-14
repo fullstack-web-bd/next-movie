@@ -1,12 +1,14 @@
 import { getFlagImageUrl } from "@/utils/flag-generator";
 import { Rating } from "flowbite-react";
 import Image from "next/image";
-import MovieTrailer from "../movies/movie-trailer";
+import MovieTrailer from "@/components/movies/movie-trailer";
 import Link from "next/link";
-import AddToWatchListIcon from "../watchlist/icon";
+import AddToWatchListIcon from "@/components/watchlist/icon";
+import { IMovie } from "@/interfaces";
 
 interface IMovieBanner {
   addToWatchList?: boolean;
+  movie: IMovie;
 }
 
 export default function MovieBanner({

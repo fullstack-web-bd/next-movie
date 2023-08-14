@@ -1,13 +1,13 @@
-import { Button, Modal } from "flowbite-react";
+import { Modal } from "flowbite-react";
 import { useState } from "react";
 
-export default function MovieGalleryImage({ image }) {
+export default function MovieGalleryImage({ image }: { image: string }) {
+  const [openModal, setOpenModal] = useState<string | undefined>();
+  const props = { openModal, setOpenModal };
+
   if (!image) {
     return null;
   }
-
-  const [openModal, setOpenModal] = useState<string | undefined>();
-  const props = { openModal, setOpenModal };
 
   return (
     <>

@@ -1,3 +1,4 @@
+import { IMovie, IState } from "@/interfaces";
 import {
   getWatchListsAction,
   toggleWatchlistAction,
@@ -5,9 +6,9 @@ import {
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function AddToWatchListIcon({ movie }) {
+export default function AddToWatchListIcon({ movie }: { movie: IMovie }) {
   const dispatch = useDispatch();
-  const { watchlists } = useSelector((state) => state.watchlist);
+  const { watchlists } = useSelector((state: IState) => state.watchlist);
 
   useEffect(() => {
     dispatch(getWatchListsAction());

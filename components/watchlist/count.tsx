@@ -1,7 +1,8 @@
+import { IState } from "@/interfaces";
 import { useSelector } from "react-redux";
 
 export default function WatchListCount() {
-  const { watchlists } = useSelector((state) => state.watchlist);
+  const { watchlists } = useSelector((state: IState) => state.watchlist);
 
   if (watchlists.length === 0) {
     return null;

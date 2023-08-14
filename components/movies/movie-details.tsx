@@ -3,8 +3,9 @@ import SectionHeader from "../section-header";
 import MovieGalleryImage from "./movie-gallery";
 import { useRouter } from "next/router";
 import { Badge } from "flowbite-react";
+import { IMovie } from "@/interfaces";
 
-export default function MovieDetails({ movie }) {
+export default function MovieDetails({ movie }: { movie: IMovie }) {
   const router = useRouter();
   const genres = movie.genre?.split(",") ?? [];
 

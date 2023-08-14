@@ -1,4 +1,4 @@
-export const getFlagImageUrl = (language: string): string | null => {
+export const getFlagImageUrl = (language: string): string | undefined => {
   let flagUrl = "/flags/";
 
   switch (language) {
@@ -10,7 +10,7 @@ export const getFlagImageUrl = (language: string): string | null => {
       break;
 
     default:
-      return null;
+      return undefined;
   }
 
   return flagUrl;
