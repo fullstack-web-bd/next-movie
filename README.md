@@ -1,38 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next Movie Application using Next JS
 
-## Getting Started
+A Complete movie application using Tailwind CSS, Next JS, TypeScript, React, Redux and more...
 
-First, run the development server:
+---
+
+## Live Demo
+https://watch-next-movie.netlify.com
+
+
+## How to setup
 
 ```bash
+# clone the repo.
+git clone git@github.com:fullstack-web-bd/next-movie.git
+
+# go to that folder.
+cd next-movie
+
+# install node
+npm i
+
+# start the server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# to build
+# npm run build
 ```
 
+## Browse at localhost
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Technologies used here -
+  - [x] Tailwind CSS
+  - [x] React JS
+  - [x] Next JS
+  - [x] Redux
+  - [x] TypeScript
+  - [x] Netlify build
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Next JS specific stuffs
+  - [x] Server side rendering
+    - [x] Movie list page - https://watch-next-movie.netlify.app/
+    - [x] Movie Detail page - https://watch-next-movie.netlify.app/movies/avatar-the-way-of-water
+  - [x] Client side rendering
+    - [x] Watchlist page - https://watch-next-movie.netlify.app/watchlist
+  - [x] Next JS APIs
+    - [x] Movie list API - https://watch-next-movie.netlify.app/api/movies
+    - [x] Movie detail API - https://watch-next-movie.netlify.app/api/movies/game-of-thrones
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Redux
+  - [x] Watchlist
+    - [x] Add to watchlist
+    - [x] List of watchlist
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Movie JSON datasets
+https://gist.github.com/ManiruzzamanAkash/2dd8e7bbf70401065cd882e4b6abc6a7
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+Maniruzzaman Akash - manirujjamanakash@gmail.com
