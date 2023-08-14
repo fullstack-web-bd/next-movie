@@ -1,7 +1,7 @@
 import MovieBanner from "@/components/movie-banner";
 import MovieDetails from "@/components/movies/movie-details";
 
-export default function MovieDetail({ movie }) {
+export default function MovieDetailPage({ movie }) {
   return (
     <main>
       <MovieBanner addToWatchList={true} movie={movie} />
@@ -19,7 +19,7 @@ export async function getServerSideProps({ params, res }) {
 
   const { slug } = params;
   const detailResponse = await fetch(
-    `http://localhost:3000/api/movies/${slug}`
+    `${process.env.NEXT_PUBLIC_API_URL}movies/${slug}`
   );
 
   const { data } = await detailResponse.json();

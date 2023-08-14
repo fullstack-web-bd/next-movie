@@ -4,7 +4,7 @@ import SectionHeader from "@/components/section-header";
 import Movie from "@/components/movies/single-movie";
 import { useRouter } from "next/router";
 
-export default function ({ movies, title = null, enableSorting = true }) {
+export default function Movies({ movies, title = null, enableSorting = true }) {
   const router = useRouter();
   const [filterType, setFilterType] = useState("popular");
 

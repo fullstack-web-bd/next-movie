@@ -4,7 +4,7 @@ import MovieGalleryImage from "./movie-gallery";
 import { useRouter } from "next/router";
 import { Badge } from "flowbite-react";
 
-export default function ({ movie }) {
+export default function MovieDetails({ movie }) {
   const router = useRouter();
   const genres = movie.genre?.split(",") ?? [];
 
