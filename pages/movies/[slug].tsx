@@ -25,7 +25,7 @@ export async function getServerSideProps({ params, res }) {
 
   const { data } = await detailResponse.json();
 
-  if (!data.title) {
+  if (!data?.title) {
     return {
       notFound: true,
     };

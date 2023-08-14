@@ -55,7 +55,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(200)
       .json(
         generateResponse(
-          res,
           filteredMovies,
           200,
           `Movies list fetched successfully.`
