@@ -3,8 +3,19 @@ import { useState } from "react";
 import SectionHeader from "@/components/section-header";
 import Movie from "@/components/movies/single-movie";
 import { useRouter } from "next/router";
+import { IMovie } from "@/interfaces";
 
-export default function Movies({ movies, title = null, enableSorting = true }) {
+interface MoviesProps {
+  movies: Array<IMovie>;
+  title?: string | null;
+  enableSorting?: boolean;
+}
+
+export default function Movies({
+  movies,
+  title = null,
+  enableSorting = true,
+}: MoviesProps) {
   const router = useRouter();
   const [filterType, setFilterType] = useState("popular");
 

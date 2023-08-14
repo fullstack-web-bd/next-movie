@@ -3,7 +3,11 @@ import Header from "@/components/layouts/Header";
 import Sidebar from "@/components/layouts/Sidebar";
 import Head from "next/head";
 
-export default function Layout({ children }) {
+interface ILayout {
+  children?: React.ReactNode;
+}
+
+export default function Layout({ children }: ILayout) {
   return (
     <>
       <Head>

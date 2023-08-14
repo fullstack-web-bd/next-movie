@@ -1,7 +1,8 @@
+import { IMovie } from "@/interfaces";
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 
-export default function MovieTrailer({ movie }) {
+export default function MovieTrailer({ movie }: { movie: IMovie }) {
   const [openModal, setOpenModal] = useState<string | undefined>();
   const props = { openModal, setOpenModal };
   const trailerId = movie?.trailer.split("v=")[1];

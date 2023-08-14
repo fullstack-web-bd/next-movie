@@ -1,8 +1,9 @@
 import { Card, Rating } from "flowbite-react";
 import Link from "next/link";
-import AddToWatchListIcon from "../watchlist/icon";
+import AddToWatchListIcon from "@/components/watchlist/icon";
+import { IMovie } from "@/interfaces";
 
-export default function SingleMovie({ movie }) {
+export default function SingleMovie({ movie }: { movie: IMovie }) {
   return (
     <div className="basis-[23.6%]">
       <Card

@@ -1,7 +1,8 @@
 import MovieBanner from "@/components/movie-banner";
 import MovieDetails from "@/components/movies/movie-details";
+import { IMovie } from "@/interfaces";
 
-export default function MovieDetailPage({ movie }) {
+export default function MovieDetailPage({ movie }: { movie: IMovie }) {
   return (
     <main>
       <MovieBanner addToWatchList={true} movie={movie} />
