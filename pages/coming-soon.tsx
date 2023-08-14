@@ -17,7 +17,7 @@ export async function getServerSideProps({ query, res }) {
   // );
 
   const sort = query.sort ?? "sort_rating_desc";
-  let url = `http://localhost:3000/api/movies?sort=${sort}&coming_soon=true`;
+  let url = `${process.env.NEXT_PUBLIC_API_URL}movies?sort=${sort}&coming_soon=true`;
 
   if (query.search) {
     url += `&search=${query.search}`;
