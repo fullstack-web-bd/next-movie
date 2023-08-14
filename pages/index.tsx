@@ -16,13 +16,10 @@ export default function HomePage({ movies, movieBanner }) {
 }
 
 export async function getServerSideProps({ query, res }) {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=60, stale-while-revalidate=59"
-  );
-
-  // const startIndex = query.start ?? 0;
-  // const limit = query.limit ?? 10;
+  // res.setHeader(
+  //   "Cache-Control",
+  //   "public, s-maxage=60, stale-while-revalidate=59"
+  // );
 
   const sort = query.sort ?? "sort_rating_desc";
   let url = `${process.env.NEXT_PUBLIC_API_URL}movies?sort=${sort}`;

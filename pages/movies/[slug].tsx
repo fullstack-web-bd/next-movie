@@ -13,10 +13,10 @@ export default function MovieDetailPage({ movie }: { movie: IMovie }) {
 }
 
 export async function getServerSideProps({ params, res }) {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=60, stale-while-revalidate=59"
-  );
+  // res.setHeader(
+  //   "Cache-Control",
+  //   "public, s-maxage=60, stale-while-revalidate=59"
+  // );
 
   const { slug } = params;
   const detailResponse = await fetch(
