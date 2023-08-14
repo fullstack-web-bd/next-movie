@@ -3,7 +3,7 @@ import Movies from "../movies";
 import { useDispatch, useSelector } from "react-redux";
 import { getWatchListsAction } from "@/redux/actions/watchlist-action";
 
-export default function () {
+export default function WatchLists() {
   const dispatch = useDispatch();
   const { watchlists } = useSelector((state) => state.watchlist);
 

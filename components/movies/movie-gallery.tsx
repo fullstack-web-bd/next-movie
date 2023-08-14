@@ -12,6 +12,7 @@ export default function MovieGalleryImage({ image }) {
   return (
     <>
       <img
+        alt=""
         onClick={() => props.setOpenModal("default")}
         key={image}
         src={image}
@@ -28,6 +29,7 @@ export default function MovieGalleryImage({ image }) {
           <div className="space-y-6">
             <div className="aspect-w-16 aspect-h-9">
               <img
+                alt=""
                 key={image}
                 src={image}
                 className="w-full h-full object-cover rounded-lg"

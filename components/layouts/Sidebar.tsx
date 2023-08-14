@@ -6,7 +6,7 @@ const WatchListCount = dynamic(() => import("../watchlist/count"), {
   ssr: false,
 });
 
-export default function () {
+export default function Sidebar() {
   const router = useRouter();
 
   return (

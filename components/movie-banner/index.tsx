@@ -9,7 +9,10 @@ interface IMovieBanner {
   addToWatchList?: boolean;
 }
 
-export default function ({ addToWatchList = false, movie }: IMovieBanner) {
+export default function MovieBanner({
+  addToWatchList = false,
+  movie,
+}: IMovieBanner) {
   if (!movie) {
     return null;
   }
