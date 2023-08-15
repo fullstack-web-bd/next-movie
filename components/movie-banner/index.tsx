@@ -24,7 +24,7 @@ export default function MovieBanner({
     .map((lang: string) => lang.trim());
 
   return (
-    <div className="max-w-[100%] relative">
+    <div className={`max-w-[100%] relative`}>
       <Image
         src={movie.poster}
         alt=""
@@ -32,6 +32,8 @@ export default function MovieBanner({
         height={0}
         sizes="80vw"
         className="w-full h-auto max-h-[400px] rounded-xl"
+        placeholder="blur"
+        blurDataURL="/movies/placeholder.png"
       />
 
       <div
@@ -39,9 +41,9 @@ export default function MovieBanner({
         style={{ boxShadow: "inset 247px 20px 144px -102px black" }}
       ></div>
 
-      <div className="absolute text-white top-20 left-5">
+      <div className="absolute text-white top-3 sm:top-20 left-5">
         <div className="flex justify-between items-center">
-          <h2 className="text-4xl font-bold mb-2">
+          <h2 className="text-xl sm:text-4xl font-bold mb-2">
             <Link href={`/movies/${movie.slug}`}>{movie.title}</Link>
           </h2>
           {addToWatchList && <AddToWatchListIcon movie={movie} />}
@@ -50,7 +52,7 @@ export default function MovieBanner({
           <h3 className="text-xl font-thin">{movie?.subheading ?? ""}</h3>
         )}
 
-        <div className="flex mt-10 gap-6 items-center">
+        <div className="flex flex-col sm:flex-row mt-4 sm:mt-10 gap-6 sm:items-center">
           <div>
             <Rating>
               <span className="bg-yellow-500 px-3 py-1 text-xs rounded text-black">

@@ -5,7 +5,7 @@ import { IMovie } from "@/interfaces";
 
 export default function SingleMovie({ movie }: { movie: IMovie }) {
   return (
-    <div className="basis-[23.6%]">
+    <div className="sm:basis-[23.6%]">
       <Card
         className="relative border-1 border-slate-900 !bg-transparent"
         imgAlt="Meaningful alt text for an image that is not purely decorative"

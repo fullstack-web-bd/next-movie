@@ -54,7 +54,7 @@ export default function Header() {
               <input
                 type="search"
                 placeholder="Search everything"
-                className="border-5 w-20 sm:w-full rounded-full border border-solid border-slate-800 bg-transparent p-3 pl-3 sm:pl-12 focus:border-slate-800 active:border-slate-800 text-xs text-slate-500 placeholder:text-slate-500"
+                className="border-5 w-full rounded-full border border-solid border-slate-800 bg-transparent p-3 pl-3 sm:pl-12 focus:border-slate-800 active:border-slate-800 text-xs text-slate-500 placeholder:text-slate-500"
                 onChange={onSearch}
               />
             </li>
@@ -64,7 +64,7 @@ export default function Header() {
         {/* Header right side */}
         <div>
           <ul className="list-none">
-            <li>
+            <li className="hidden sm:block">
               <a href="" className="relative mr-4">
                 <i className="bi bi-dot absolute -right-0.5 -top-3 text-red-500"></i>
                 <i className="bi bi-chat-square-dots"></i>

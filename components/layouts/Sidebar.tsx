@@ -10,7 +10,7 @@ export default function Sidebar() {
   const router = useRouter();
 
   return (
-    <aside className="basis-[20%] sticky top-0 h-screen overflow-y-auto border-r border-solid border-slate-900 px-10 pt-10">
+    <aside className="sm:basis-[20%] sticky top-0 h-screen min-h-[100%] sm:min-h-screen overflow-y-auto border-r border-solid border-slate-900 px-10 pt-10">
       {/* Logo */}
       <div className="mb-10">
         <Link href={"/"}>
